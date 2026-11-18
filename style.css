@@ -1,0 +1,37 @@
+/* style.css - Kip's site, IMD318. Tokens first, then layout, then components. */
+:root{--ink:#14213d;--gold:#e0a100;--teal:#0b7a75;--bg:#eef2f6;--tx:#1d1d1d;--panel:#fff}
+body.dark{--bg:#10151f;--tx:#e8e8e8;--panel:#1a2233;--ink:#e0a100}
+body.hc{--bg:#000;--tx:#fff;--panel:#000;--ink:#ff0;--teal:#0ff}
+*{box-sizing:border-box}
+body{margin:0;font:1rem/1.65 "Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--tx)}
+.skip{position:absolute;left:-999px}.skip:focus{left:0;background:var(--gold);color:#000;padding:.5rem;z-index:9}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+header{background:#14213d;color:#fff;text-align:center;padding:1.5rem 1rem 1.2rem;border-bottom:14px solid transparent;
+ border-image:repeating-linear-gradient(135deg,#e0a100 0 10px,#14213d 10px 20px,#0b7a75 20px 30px,#14213d 30px 40px) 14}
+.brand{font:700 3rem Georgia,serif;margin:0;letter-spacing:.05em;animation:drop 1s ease-out}
+@keyframes drop{from{opacity:0;letter-spacing:.6em}}
+nav{display:flex;flex-wrap:wrap;justify-content:center;background:#0d1730;position:sticky;top:0;z-index:5}
+nav a{color:#fff;padding:.8rem 1.1rem;text-decoration:none}
+nav a:hover,nav a.on{background:var(--gold);color:#000}
+.tools{text-align:right;font-size:.85rem;padding:.4rem 1rem}
+main{max-width:880px;margin:1rem auto;padding:0 1rem}
+h1,h2{font-family:Georgia,serif;color:var(--ink)}
+section{background:var(--panel);border-left:6px solid var(--gold);padding:.4rem 1.5rem 1rem;margin:1.2rem 0}
+a{color:var(--teal)}
+table{border-collapse:collapse;width:100%;background:var(--panel)}
+th,td{border:1px solid #8887;padding:.5rem;text-align:left}
+th{background:#14213d;color:#fff}
+tr:nth-child(even) td{background:#8881}
+caption{font-weight:700;padding:.5rem;text-align:left}
+img{max-width:100%;height:auto}
+.scroll{overflow-x:auto}
+.star{list-style:"\2726  "}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem}
+.gal img{transition:transform .3s}.gal img:hover{transform:scale(1.05)}
+.thumbs a{display:inline-block;margin:.3rem;text-align:center;font-size:.85rem}.thumbs img{width:90px;display:block}
+mark{background:var(--gold)}
+pre{background:#14213d;color:#e0a100;padding:1rem;overflow-x:auto}
+footer{background:#14213d;color:#fff;text-align:center;padding:1rem;font-size:.9rem;margin-top:2rem}footer a{color:var(--gold)}
+.toast{position:fixed;bottom:1rem;right:1rem;background:var(--gold);color:#000;padding:.8rem 1.2rem;border-radius:6px;animation:drop .5s}
+@media(max-width:600px){nav a{flex:1 1 45%;text-align:center}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
